@@ -6,8 +6,10 @@
 
 #include "Person.h"
 
-Person::Person() : name((struct nm) {.first_name = "dummy_first_name", .last_name = "dummy_first_name"})
-{}
+Person::Person() : name((struct nm) {.first_name = "dummy_first_name", .last_name = "dummy_first_name"}),
+                   dob((struct tm) {.tm_mday = -1, .tm_mon = -1, .tm_year = 1899}),
+                   contact((struct contact_details) {.email = "email@domain", .address = "dummy_physical_address", .phone = -1})
+                   {}
 
 Person::~Person()
 {}
