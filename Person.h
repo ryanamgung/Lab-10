@@ -4,12 +4,24 @@
 #include <string>
 #include <ctime>
 
+
+
 class Person
 {
     protected:
-        // instance variables here...
+        struct nm {
+            std::string first_name;
+            std::string last_name;
+        } name;
+        struct tm dob;
+        struct contact_details {
+            std::string email;
+            std::string address;
+            long        phone;
+        } contact;
+        int    urid;
 
-    public:
+    public:   
         Person();
         Person(const Person& other);
         Person(int urid, std::string netid, std::string lname, std::string fname, 
