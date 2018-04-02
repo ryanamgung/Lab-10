@@ -1,4 +1,5 @@
 //Created by: hn3gn as9kc
+
 #ifndef __STUDENT_H__
 #define __STUDENT_H__
 
@@ -13,8 +14,27 @@ class Student : public Person
         enum School {AS, JSLS, LAW, RSB, SPCS, UNDEFINED};
 
     protected:
-        // instance variables here...
-        
+        int urid;
+        std::string netid;
+        std::string lname;
+        std::string fname;
+        int dob_day;
+        int dob_mo;
+        int dob_yr;
+        std::string email;
+        std::string address;
+        long phone;
+        int day_admit;
+        int month_admit;
+        int year_admit;
+        School school;
+        bool is_full_time;
+        double units_completed;
+        std::string course;
+        std::list <std::string> courses;
+
+
+
     public:
         Student();                      // explicitly call Person() on implementation
         Student(const Student& other);  // call Person(other) on implementation
@@ -47,3 +67,4 @@ class Student : public Person
 };
 
 #endif
+
