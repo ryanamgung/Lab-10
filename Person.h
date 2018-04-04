@@ -19,7 +19,9 @@ class Person
             std::string address;
             long        phone;
         } contact;
-        int    urid;
+        
+        int         urid;
+        std::string netid;
 
     public:   
         Person();

@@ -15,4 +15,4 @@ tester: $(OBJS)
 	$(CC) $(CCFLAGS) -c $<
 
 clean:
-	/bin/rm -f a.out $(OBJS) $(EXECS)
+	/bin/rm -f a.out $(OBJS) $(EXECS) 
