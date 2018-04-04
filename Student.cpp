@@ -9,6 +9,9 @@ Student::Student(const Student& other)
 {	
 }
 
+Student::~Student()
+{}
+
 Student::Student(int urid, std::string netid, std::string lname, std::string fname, int dob_day, int dob_mo, int dob_yr, std::string email, std::string address, long phone,
 int day_admit, int month_admit, int year_admit, School school, bool is_full_time, double units_completed): Person(urid), Person(netid)
 {
@@ -41,6 +44,35 @@ void Student::clearCourses(){
 	courses = null;
 }
 
+struct tm getAdmitDate()
+{}
+
+School getSchool()
+{}
+        
+double getGPA()
+{}
+
+double getUnitsCompleted()
+{}
+
+bool isFullTime()
+{}
+
+void setAdmitDate(int day, int month, int year)
+{}
+
+void setSchool(School school)
+{}
+
+void setGPA(double gpa)
+{}
+
+void setUnitsCompleted(double units)
+{}
+
+void setFullTimeStatus(bool isFullTime)
+{}
 
 
 #endif
