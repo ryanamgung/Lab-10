@@ -9,7 +9,11 @@
 Person::Person() : name((struct nm) {.first_name = "dummy_first_name", .last_name = "dummy_first_name"}),
                    //dob((struct tm) {.tm_mday = -1, .tm_mon = -1, .tm_year = 1899}),
                    contact((struct contact_details) {.email = "email@domain", .address = "dummy_physical_address", .phone = -1})
-                   {}
+{
+    Person::dob.tm_mday = -1;
+    Person::dob.tm_mon = -1;
+    Person::dob.tm_year = 1899;
+}
 
 Person::~Person()
 {}
@@ -23,28 +27,44 @@ Person::Person(int urid, std::string netid, std::string lname, std::string fname
 {}
 
 std::string  Person::getFirstName()
-{}
+{
+    return 0;
+}
 
 std::string  Person::getLastName()
-{}
+{
+    return 0;
+}
 
 struct tm    Person::getDateOfBirth()
-{}
+{
+    return *(new struct tm);
+}
 
 std::string  Person::getAddress()
-{}
+{
+    return 0;
+}
 
 std::string  Person::getNetID()
-{}
+{
+    return 0;
+}
 
 int          getURID()
-{}
+{
+    return 0;
+}
 
 std::string  getEmail()
-{}
+{
+    return 0;
+}
 
 long         getPhone()
-{}
+{
+    return 0;
+}
 
 void setFirstName(std::string fname)
 {}
