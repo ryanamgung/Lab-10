@@ -7,8 +7,8 @@
 #include "Person.h"
 
 Person::Person() : name((struct nm) {.first_name = "dummy_first_name", .last_name = "dummy_first_name"}),
-                   //dob((struct tm) {.tm_mday = -1, .tm_mon = -1, .tm_year = 1899}),
-                   contact((struct contact_details) {.email = "email@domain", .address = "dummy_physical_address", .phone = -1})
+                   contact((struct contact_details) {.email = "email@domain", .address = "dummy_physical_address", .phone = -1}),
+                   urid(0), netid("wx0yz")
 {
     Person::dob.tm_mday = -1;
     Person::dob.tm_mon = -1;
@@ -19,32 +19,41 @@ Person::~Person()
 {}
 
 Person::Person(const Person& other)
-{}
+{
+    Person::dob.tm_mday = other.Person::dob.tm_mday;
+    Person::dob.tm_mon  = other.Person::dob.tm_mon;
+    Person::dob.tm_year = other.Person::dob.tm_year;
+    
+    Person::name.first_name = other.Person::name.first_name;
+    Person::name.last_name  = other.Person::name.last_name;
+    
+    Person::contact.email   = other.Person::contact.email;
+    Person::contact.address = other.Person::contact.address;
+    Person::contact.phone   = other.Person::contact.phone;
+    
+    Person::urid    = other.Person::urid;
+    Person::netid   = other.Person::netid;
+}
 
 Person::Person(int urid, std::string netid, std::string lname, std::string fname, 
                int dob_day, int dob_month, int dob_year,
                std::string email, std::string address, long phone)
-{}
-
-std::string  Person::getFirstName()
+               : name((struct nm) {.first_name = fname, .last_name = lname}),
+                 contact((struct contact_details) {.email = email, .address = address, .phone = phone}),
+                 urid(urid), netid(netid)
 {
-    return 0;
+    Person::dob.tm_mday = dob_day;
+    Person::dob.tm_mon = dob_month;
+    Person::dob.tm_year = dob_year;
 }
 
-std::string  Person::getLastName()
-{
-    return 0;
-}
+std::string  Person::getFirstName()     { return Person::name.first_name; }
 
-struct tm    Person::getDateOfBirth()
-{
-    return *(new struct tm);
-}
+std::string  Person::getLastName()      { return Person::name.last_name; }
 
-std::string  Person::getAddress()
-{
-    return 0;
-}
+struct tm    Person::getDateOfBirth()   { return Person::dob; }
+
+std::string  Person::getAddress()       { return Person::contact.address; }
 
 std::string  Person::getNetID()
 {
