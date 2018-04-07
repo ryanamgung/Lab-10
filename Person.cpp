@@ -59,7 +59,7 @@ std::string  Person::getNetID()
     return 0;
 }
 
-int          getURID()
+int          Person::getURID()
 {
     return 0;
 }
