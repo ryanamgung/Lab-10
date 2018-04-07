@@ -83,7 +83,7 @@ int main()
                89321738, "km3lw", "Smartypants", "Joe", 
                6, 8, 2006, "joebiden@richmond.edu",
                "Kansas Land", 911, 30, 3, 2015,
-               Student::School school.School::AS, true, 19
+               Student::AS, true, 19
            );
     Student thirdStudent(secondStudent);
 
