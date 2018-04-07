@@ -28,6 +28,7 @@ int main()
     
     std::cout << std::setfill ('=') << std::setw (64) << "\n";
     std::cout << std::setfill ('=') << std::setw (64) << "\n";
+    
     std::cout << "Testing getters.\n";
     std::cout << std::setfill ('.') << std::setw (64) << "\n";
     /***************    Testing getFirstName()  */
