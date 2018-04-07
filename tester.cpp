@@ -3,6 +3,8 @@
 #include <iomanip>
 #include "Person.h"
 #include "Student.h"
+#include <iomanip>
+using namespace std;
 
 int main()
 {
@@ -75,6 +77,46 @@ int main()
     /***********************************************************************
     ****************    Section: Student tests   ***************************
     ***********************************************************************/
+
+    Student firstStudent();
+    Student secondStudent(
+               89321738, "km3lw", "Smartypants", "Joe", 
+               6, 8, 2006, "joebiden@richmond.edu",
+               "Kansas Land", 911, 30, 3, 2015,
+               Student::School school.School::AS, true, 19
+           );
+    Student thirdStudent(secondStudent);
+
+    cout << setfill ('=') << setw(64) << endl;
+
+    for(int i = 0; i < secondStudent.Student::courses.size; i++){
+        cout << secondStudent.Student::courses[i] << endl;
+    }
+
+    secondStudent.Student::addCourse("Algebra");
+
+    
+        
+    /*
+        std::list<std::string> getCourses();
+        void                   addCourse(std::string course);
+        void                   removeCourse(std::string course);
+        void                   printCourses();
+        void                   setCourses(std::list<std::string> courses);
+        void                   clearCourses();
+
+        struct tm              getAdmitDate();
+        School                 getSchool();
+        double                 getGPA();
+        double                 getUnitsCompleted();
+        bool                   isFullTime();
+
+        void setAdmitDate(int day, int month, int year);
+        void setSchool(School school);
+        void setGPA(double gpa);
+        void setUnitsCompleted(double units);
+        void setFullTimeStatus(bool isFullTime);
+        */
     
 	return 0;
 }

@@ -26,12 +26,9 @@ int day_admit, int month_admit, int year_admit, School school, bool is_full_time
 }
 
 
-Student::getCourses()
+std::list<std::string> Student::getCourses()
 {
-	for(int i = 0; i < courses.size; i++)
-	{
-		std::cout << courses[i] << std::endl;
-	}
+	return courses;
 }
 
 void Student::addCourse(std::string course){
