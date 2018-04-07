@@ -18,9 +18,10 @@ int main()
                "This is where I live.", 8042898000
            );
     Person thirdPerson(secondPerson);
-        
+    
+  
     /*
-    std::string  getFirstName();
+        std::string  getFirstName();
         std::string  getLastName();
         struct tm    getDateOfBirth(); 
             // see http://www.cplusplus.com/reference/ctime/tm/
@@ -39,7 +40,7 @@ int main()
         void setEmail(std::string email);
         void setPhone(long number);
     */
-    
+   
     
     /***********************************************************************
     ****************    Section: Student tests   ***************************
