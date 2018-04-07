@@ -14,23 +14,14 @@ class Student : public Person
         enum School {AS, JSLS, LAW, RSB, SPCS, UNDEFINED};
 
     protected:
-        int urid;
-        std::string netid;
-        std::string lname;
-        std::string fname;
-        int dob_day;
-        int dob_mo;
-        int dob_yr;
-        std::string email;
-        std::string address;
-        long phone;
+
+        double units_completed;
+        double gpa;
         int day_admit;
         int month_admit;
         int year_admit;
         School school;
         bool is_full_time;
-        double units_completed;
-        std::string course;
         std::list <std::string> courses;
 
 
