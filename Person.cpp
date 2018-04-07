@@ -1,4 +1,3 @@
-// This file coded by as9kc
 // as9kc and hn3gn
 
 #ifndef __PERSON_CPP__
@@ -12,7 +11,7 @@ Person::Person() : name((struct nm) {.first_name = "dummy_first_name", .last_nam
 {
     Person::dob.tm_mday = -1;
     Person::dob.tm_mon = -1;
-    Person::dob.tm_year = 1899;
+    Person::dob.tm_year = 1899 - 1900;
 }
 
 Person::~Person()
@@ -44,7 +43,7 @@ Person::Person(int urid, std::string netid, std::string lname, std::string fname
 {
     Person::dob.tm_mday = dob_day;
     Person::dob.tm_mon = dob_month;
-    Person::dob.tm_year = dob_year;
+    Person::dob.tm_year = dob_year - 1900;
 }
 
 std::string  Person::getFirstName()     { return Person::name.first_name; }

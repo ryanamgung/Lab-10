@@ -1,3 +1,5 @@
+# as9kc and hn3gn
+
 EXECS = tester
 OBJS = tester.o Person.o #Student.o
 CC = g++
