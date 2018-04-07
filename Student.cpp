@@ -88,7 +88,7 @@ void setAdmitDate(int day, int month, int year)
 	year_admit = year 
 }
 
-void setSchool(School school)
+void setSchool(Student::School school)
 {
 	school = this.school;
 }
