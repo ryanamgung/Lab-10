@@ -13,12 +13,13 @@ int main()
     ****************    Section: Person tests   ****************************
     ***********************************************************************/
 
-    std::cout << std::setfill ('=') << std::setw (64) << "\n";
+    std::cout << "Tests for PERSON.\n";
+    std::cout << std::setfill ('=') << std::setw (64) << "\n";    
     std::cout << "Testing constructors.\n";
     std::cout << std::setfill ('.') << std::setw (64) << "\n";
     
-    /*******    Constructor(s)  ********/
-    Person firstPerson();
+    /***************    Testing constructors        */
+    Person firstPerson;
     Person secondPerson(
                12481632, "zz1zz", "ALastName", "AFirstName", 
                14, 3, 1970, "student@richmond.edu",
@@ -29,20 +30,19 @@ int main()
     std::cout << "\tConstruction passed.\n";
     
     std::cout << std::setfill ('=') << std::setw (64) << "\n";
-    std::cout << std::setfill ('=') << std::setw (64) << "\n";
     
     std::cout << "Testing getters.\n";
     std::cout << std::setfill ('.') << std::setw (64) << "\n";
     
     std::cout << "Name.\n";
-    /***************    Testing getFirstName()  */
+    /***************    Testing getFirstName()      */
     std::cout << "\t" << secondPerson.Person::getFirstName()
               << "\t[AFirstName]" << std::endl;
-    /***************    Testing getLastName()  */
+    /***************    Testing getLastName()       */
     std::cout << "\t" << secondPerson.Person::getLastName()
               << "\t[ALastName]" << std::endl;
               
-    /***************    Testing getDateOfBirth()  */
+    /***************    Testing getDateOfBirth()    */
     std::cout << "Date of birth.\n";
     std::cout << "\t" << secondPerson.Person::getDateOfBirth().tm_mday
               << "\t[14 (birth date)]" << std::endl;
@@ -52,31 +52,63 @@ int main()
               << "\t[70 (birth year since 1900)]" << std::endl;
               
     std::cout << "Contact details.\n";
-    /***************    Testing getAddress()  */
+    /***************    Testing getAddress()        */
     std::cout << "\t" << secondPerson.Person::getAddress()
               << "\t[This is where I live.]" << std::endl;
-    /***************    Testing getEmail()  */
+    /***************    Testing getEmail()          */
     std::cout << "\t" << secondPerson.Person::getEmail()
               << "\t[student@richmond.edu]" << std::endl;
     std::cout << "\t" << secondPerson.Person::getPhone()
               << "\t[8042898000]" << std::endl;
     
+    std::cout << std::setfill ('=') << std::setw (64) << "\n";
     
+    std::cout << "Testing setters.\n";
+    std::cout << std::setfill ('.') << std::setw (64) << "\n";
     
+    /***************    Testing set Name        */ 
+    std::cout << "Setting name.\n";   
+    firstPerson.Person::setFirstName("Webst");
+    firstPerson.Person::setLastName("UR");
+    std::cout << "\t" << firstPerson.Person::getFirstName()
+              << "\t[Webst]" << std::endl;
+    std::cout << "\t" << firstPerson.Person::getLastName()
+              << "\t[UR]" << std::endl;
+              
+    /***************    Testing set DOB         */  
+    std::cout << "Setting DOB.\n";  
+    firstPerson.Person::setDateOfBirth(31,12,1964);
+    std::cout << "\t" << firstPerson.Person::getDateOfBirth().tm_mday
+              << "\t[31]" << std::endl;
+    std::cout << "\t" << firstPerson.Person::getDateOfBirth().tm_mon
+              << "\t[12]" << std::endl;
+    std::cout << "\t" << firstPerson.Person::getDateOfBirth().tm_year
+              << "\t[1964-1900 = 64]" << std::endl;
+    
+    /***************    Testing set contact details (various)   */
+    std::cout << "Setting various contact details.\n";  
+    std::cout << "\tSetting email.\n";
+    firstPerson.Person::setEmail("guest@your.domain");
+    std::cout << "\t" << firstPerson.Person::getEmail()
+              << "\t[guest@your.domain]" << std::endl;
+              
+    std::cout << "\tSetting address.\n";
+    firstPerson.Person::setAddress("28 Westhampton Way");
+    std::cout << "\t" << firstPerson.Person::getAddress()
+              << "\t[28 Westhampton Way]" << std::endl;
+              
+    std::cout << "\tSetting phone.\n";
+    firstPerson.Person::setPhone(8044004408);
+    std::cout << "\t" << firstPerson.Person::getPhone()
+              << "\t[8044004408]" << std::endl;
   
-      
+  
+    std::cout << std::endl;
+    std::cout << std::setfill ('=') << std::setw (64) << "\n";
+    std::cout << std::setfill ('=') << std::setw (64) << "\n";
   
     /*
-        std::string  getFirstName();
-        std::string  getLastName();
-        struct tm    getDateOfBirth(); 
-            // see http://www.cplusplus.com/reference/ctime/tm/
-        std::string  getAddress();
-        std::string  getNetID();
-        int          getURID();
-        std::string  getEmail();
-        long         getPhone();
-
+       
         void setFirstName(std::string fname);
         void setLastName(std::string lname);
         void setDateOfBirth(int day, int month, int year);
@@ -91,6 +123,7 @@ int main()
     /***********************************************************************
     ****************    Section: Student tests   ***************************
     ***********************************************************************/
+    std::cout << "Tests for STUDENT.\n";
     
     Student firstStudent();
     Student secondStudent(
