@@ -2,7 +2,7 @@
 #include <iostream>
 #include <iomanip>
 #include "Person.h"
-//#include "Student.h"
+#include "Student.h"
 #include <iomanip>
 using namespace std;
 
@@ -91,7 +91,7 @@ int main()
     /***********************************************************************
     ****************    Section: Student tests   ***************************
     ***********************************************************************/
-    /*
+    
     Student firstStudent();
     Student secondStudent(
                89321738, "km3lw", "Smartypants", "Joe", 
@@ -103,21 +103,20 @@ int main()
 
     cout << setfill ('=') << setw(64) << endl;
 
-    list<string>::const_iterator iterator;
+    list<string>::iterator iterator;
 
-    for(iterator = Student::courses.begin(); iterator != courses.end(); ++iterator){
+    for(iterator = secondStudent.Student::getCourses().begin(); iterator != secondStudent.Student::getCourses().end(); ++iterator){
         cout << *iterator;
     }
 
     cout << "checking that add Course works, should return Algebra" << endl;
     secondStudent.Student::addCourse("Algebra");
-    for(iterator = Student::courses.begin(); iterator != courses.end(); ++iterator){
+    for(iterator = secondStudent.Student::getCourses().begin(); iterator != secondStudent.Student::getCourses().end(); ++iterator){
         cout << *iterator;
     }
 
-    cout << 
-
-    */
+   
+    
         
     /*
         std::list<std::string> getCourses();
