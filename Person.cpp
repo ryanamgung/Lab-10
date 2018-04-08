@@ -54,48 +54,33 @@ struct tm    Person::getDateOfBirth()   { return Person::dob; }
 
 std::string  Person::getAddress()       { return Person::contact.address; }
 
-std::string  Person::getNetID()
-{
-    return 0;
-}
+std::string  Person::getNetID()         { return Person::netid; }
 
-int          Person::getURID()
-{
-    return 0;
-}
+int          Person::getURID()          { return Person::urid; }
 
-std::string  Person::getEmail()
-{
-    return "";
-}
+std::string  Person::getEmail()         { return Person::contact.email; }
 
-long         Person::getPhone()
-{
-    return 0;
-}
+long         Person::getPhone()         { return Person::contact.phone; }
 
-void Person::setFirstName(std::string fname)
-{}
+void Person::setFirstName(std::string fname)    { Person::name.first_name = fname; }
 
-void Person::setLastName(std::string lname)
-{}
+void Person::setLastName(std::string lname)     { Person::name.last_name = lname; }
 
 void Person::setDateOfBirth(int day, int month, int year)
-{}
+{
+    Person::dob.tm_mday = day;
+    Person::dob.tm_mon = month;
+    Person::dob.tm_year = year-1900;
+}
 
-void Person::setAddress(std::string address)
-{}
+void Person::setAddress(std::string address)    { Person::contact.address = address; }
 
-void Person::setNetID(std::string netid)
-{}
+void Person::setNetID(std::string netid)        { Person::netid = netid; }
 
-void Person::setURID(int urid)
-{}
+void Person::setURID(int urid)                  { Person::urid = urid; }
 
-void Person::setEmail(std::string email)
-{}
+void Person::setEmail(std::string email)        { Person::contact.email = email; }
 
-void Person::setPhone(long number)
-{}
+void Person::setPhone(long number)              { Person::contact.phone = number; }
 
 #endif
