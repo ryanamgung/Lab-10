@@ -191,13 +191,15 @@ int main()
 
     cout << "checking that add Course works, should return Algebra" << endl;
     secondStudent.Student::addCourse("Algebra");
-    cout << "error at for" << endl;
     secondStudent.Student::printCourses();
+    cout << "\n" << endl;
 
     cout << "checking that remove Course works, should return null" << endl;
     secondStudent.Student::removeCourse("Algebra");
+
     secondStudent.Student::printCourses();
-    cout << "Nothing printed check" << endl;
+    cout << "\n" << endl;
+    cout << "Nothing printed check\n" << endl;
 
     cout << "Checking set and print courses" << endl;
 
@@ -212,6 +214,7 @@ int main()
 
     secondStudent.Student::printCourses();
 
+    cout << "\n" << endl;
     cout << "Clear courses" << endl;
     secondStudent.Student::clearCourses();
     secondStudent.Student::printCourses();
