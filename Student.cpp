@@ -62,7 +62,7 @@ struct tm Student::getAdmitDate()
 	return Student::admitDate;
 }
 
-School Student::getSchool()
+Student::School Student::getSchool()
 {
 	return Student::school;
 }
