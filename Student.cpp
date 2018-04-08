@@ -52,7 +52,7 @@ void Student::setCourses(std::list<std::string> courses){
 }
 
 void Student::clearCourses(){
-	courses.clear();
+	Student::courses.clear();
 }
 
 struct tm Student::getAdmitDate()
@@ -62,22 +62,22 @@ struct tm Student::getAdmitDate()
 
 School Student::getSchool()
 {
-	return school;
+	return Student::school;
 }
         
 double Student::getGPA()
 {
-	return gpa;
+	return Student::gpa;
 }
 
 double Student::getUnitsCompleted()
 {
-	return units_completed;
+	return Student::units_completed;
 }
 
 bool Student::isFullTime()
 {
-	return is_full_time;
+	return Student::is_full_time;
 }
 
 void Student::setAdmitDate(int day, int month, int year)
