@@ -19,9 +19,8 @@ class Student : public Person
         double gpa;
         School school;
         bool is_full_time;
-        std::list <std::string> courses;
-
-
+        std::list<std::string> courses;
+        struct tm admitDate;
 
     public:
         Student();                      // explicitly call Person() on implementation

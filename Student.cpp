@@ -16,93 +16,97 @@ Student::~Student()
 Student::Student(int urid, std::string netid, std::string lname, std::string fname, int dob_day, int dob_mo, int dob_yr, std::string email, std::string address, long phone, int day_admit, int month_admit, int year_admit, School school, bool is_full_time, double units_completed)
 {
 	Person(urid, netid, lname, fname, dob_day, dob_mo ,dob_yr, email, address, phone);
-	day_admit = 0;
-	month_admit = 0;
-	year_admit = 0;
-	is_full_time = false;
-	school = UNDEFINED;
-	units_completed = 0;
+	admitDate.tm_mday = 0;
+	admitDate.tm_mon = 0;
+	admitDate.tm_year = 0;
+	Student::is_full_time = false;
+	Student::school = Student::UNDEFINED;
+	Student::units_completed = 0;
 }
 
 
 std::list<std::string> Student::getCourses()
 {
-	return courses;
+	return Student::courses;
 }
 
 void Student::addCourse(std::string course){
-	courses.push_back(course);
+	Student::courses.push_back(course);
 }
 
 void Student::removeCourse(std::string course){
-	courses.remove(course);
+	Student::courses.remove(course);
 }
 
 void Student::printCourses(){
      std::cout << "Your courses are " << std::endl;
-     std::cout << courses << std::endl;
+     for(std::list<std::string>::iterator iterator = Student::getCourses().begin();
+         iterator != Student::getCourses().end();
+         ++iterator
+        )
+     { std::cout << *iterator; }
 }
 
 void Student::setCourses(std::list<std::string> courses){
-	courses = this.courses;
+	this->courses = courses;
 	//maybe shallow copy
 	//else iterate with for loops
 }
 
 void Student::clearCourses(){
-	courses.clear();
+	Student::courses.clear();
 }
 
-struct tm getAdmitDate()
+struct tm Student::getAdmitDate()
 {
 	return Student.admitDate;
 }
 
-School getSchool()
+School Student::getSchool()
 {
-	return school;
+	return Student::school;
 }
         
-double getGPA()
+double Student::getGPA()
 {
-	return gpa;
+	return Student::gpa;
 }
 
-double getUnitsCompleted()
+double Student::getUnitsCompleted()
 {
-	return units_completed;
+	return Student::units_completed;
 }
 
-bool isFullTime()
+bool Student::isFullTime()
 {
-	return is_full_time;
+	return Student::is_full_time;
 }
 
-void setAdmitDate(int day, int month, int year)
+void Student::setAdmitDate(int day, int month, int year)
 {
-	day_admit = day;
-	month_admit = month;
-	year_admit = year 
+    Student::admitDate.tm_mday = day;
+    Student::admitDate.tm_mon = month;
+    Student::admitDate.tm_year = year;
 }
 
-void setSchool(School school)
+void Student::setSchool(School school)
 {
-	this -> school = school;
+	Student::school = school;
 }
 
-void setGPA(double gpa)
+void Student::setGPA(double gpa)
 {
-	this -> gpa = gpa;
+	Student::gpa = gpa;
 }
 
-void setUnitsCompleted(double units)
+void Student::setUnitsCompleted(double units)
 {
-	units_completed = units;
+	Student::units_completed = units;
 }
 
-void setFullTimeStatus(bool isFullTime)
+void Student::setFullTimeStatus(bool isFullTime)
 {
-	is_full_time = isFullTime;
+	Student::is_full_time = isFullTime;
 }
 
 

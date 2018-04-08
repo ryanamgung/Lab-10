@@ -142,7 +142,9 @@ int main()
     cout << "Nothing printed check" << endl;
 
     cout << "Checking set and print courses" << endl;
+    
     secondStudent.Student::setCourses("Linear Algebra", "Biology 101", "Chemistry 101", "Music 300", "Intro to CS");
+
     secondStudent.Student::printCourses();
 
     cout << "Clear courses" << endl;
