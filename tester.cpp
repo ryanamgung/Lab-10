@@ -20,12 +20,12 @@ int main()
     
     /***************    Testing constructors        */
     Person firstPerson;
-    Person thirdPerson(
+    Person secondPerson(
                12481632, "zz1zz", "ALastName", "AFirstName", 
                14, 3, 1970, "student@richmond.edu",
                "This is where I live.", 8042898000
            );
-    Person secondPerson(thirdPerson);
+    Person thirdPerson(secondPerson);
     
     std::cout << "\tConstruction passed.\n";
     
@@ -106,6 +106,9 @@ int main()
     firstPerson.Person::setPhone(8044004408);
     std::cout << "\t" << firstPerson.Person::getPhone()
               << "\t[8044004408]" << std::endl;
+            
+    std::cout << std::setfill ('=') << std::setw (64) << "\n";    
+    std::cout << "Testing copied .\n";
   
   
     std::cout << std::endl;
