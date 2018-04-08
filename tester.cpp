@@ -108,10 +108,30 @@ int main()
               << "\t[8044004408]" << std::endl;
             
     std::cout << std::setfill ('=') << std::setw (64) << "\n";    
-    std::cout << "Testing copied .\n";
+    std::cout << "Testing copied object.\n";
+    
+    std::cout
+    << "thirdPerson.Person::getFirstName() == secondPerson.Person::getFirstName()\n"
+    << (thirdPerson.Person::getFirstName() == secondPerson.Person::getFirstName()) << "\t[1]\n"
+    << "thirdPerson.Person::getLastName() == secondPerson.Person::getLastName()\n"
+    << (thirdPerson.Person::getLastName() == secondPerson.Person::getLastName()) << "\t[1]\n"
+    << "thirdPerson.Person::getDateOfBirth().tm_mday == secondPerson.Person::getDateOfBirth().tm_mday\n"
+    << (thirdPerson.Person::getDateOfBirth().tm_mday == secondPerson.Person::getDateOfBirth().tm_mday) << "\t[1]\n"
+    << "thirdPerson.Person::getDateOfBirth().tm_mon == secondPerson.Person::getDateOfBirth().tm_mon\n"
+    << (thirdPerson.Person::getDateOfBirth().tm_mon == secondPerson.Person::getDateOfBirth().tm_mon) << "\t[1]\n"
+    << "thirdPerson.Person::getDateOfBirth().tm_year == secondPerson.Person::getDateOfBirth().tm_year\n"
+    << (thirdPerson.Person::getDateOfBirth().tm_year == secondPerson.Person::getDateOfBirth().tm_year) << "\t[1]\n"
+    << "thirdPerson.Person::getAddress() == secondPerson.Person::getAddress()\n"
+    << (thirdPerson.Person::getAddress() == secondPerson.Person::getAddress()) << "\t[1]\n"
+    << "thirdPerson.Person::getNetID() == secondPerson.Person::getNetID()\n"
+    << (thirdPerson.Person::getNetID() == secondPerson.Person::getNetID()) << "\t[1]\n"
+    << "thirdPerson.Person::getURID() == secondPerson.Person::getURID()\n"
+    << (thirdPerson.Person::getURID() == secondPerson.Person::getURID()) << "\t[1]\n"
+    << "thirdPerson.Person::getEmail() == secondPerson.Person::getEmail()\n"
+    << (thirdPerson.Person::getEmail() == secondPerson.Person::getEmail()) << "\t[1]\n"
+    << "thirdPerson.Person::getPhone() == secondPerson.Person::getPhone()\n"
+    << (thirdPerson.Person::getPhone() == secondPerson.Person::getPhone()) << "\t[1]\n";
   
-  
-    std::cout << std::endl;
     std::cout << std::setfill ('=') << std::setw (64) << "\n";
     std::cout << std::setfill ('=') << std::setw (64) << "\n";
   
