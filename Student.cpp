@@ -4,7 +4,7 @@
 #include <iostream>
 #include "Student.h"
 
-Student::Student() : 
+Student::Student()
 {}
 
 Student::Student(const Student& other)
@@ -13,10 +13,9 @@ Student::Student(const Student& other)
 Student::~Student()
 {}
 
-Student::Student(int urid, std::string netid, std::string lname, std::string fname, int dob_day, int dob_mo, int dob_yr, std::string email, std::string address, long phone,
-int day_admit, int month_admit, int year_admit, School school, bool is_full_time, double units_completed)
+Student::Student(int urid, std::string netid, std::string lname, std::string fname, int dob_day, int dob_mo, int dob_yr, std::string email, std::string address, long phone, int day_admit, int month_admit, int year_admit, School school, bool is_full_time, double units_completed)
 {
-	Person(urid, netid, lname, fname, dob_day, dob_month,dob_year, email, address, phone);
+	Person(urid, netid, lname, fname, dob_day, dob_mo ,dob_yr, email, address, phone);
 	day_admit = 0;
 	month_admit = 0;
 	year_admit = 0;

@@ -33,19 +33,33 @@ int main()
     
     std::cout << "Testing getters.\n";
     std::cout << std::setfill ('.') << std::setw (64) << "\n";
+    
+    std::cout << "Name.\n";
     /***************    Testing getFirstName()  */
-    std::cout << secondPerson.Person::getFirstName()
-              << "\n\t[\"AFirstName\"]" << std::endl;
+    std::cout << "\t" << secondPerson.Person::getFirstName()
+              << "\t[AFirstName]" << std::endl;
     /***************    Testing getLastName()  */
-    std::cout << secondPerson.Person::getLastName()
-              << "\n\t[\"ALastName\"]" << std::endl;
+    std::cout << "\t" << secondPerson.Person::getLastName()
+              << "\t[ALastName]" << std::endl;
+              
     /***************    Testing getDateOfBirth()  */
-    std::cout << secondPerson.Person::getDateOfBirth().tm_mday
-              << "\n\t[\"14\"]" << std::endl;
-    std::cout << secondPerson.Person::getDateOfBirth().tm_mon
-              << "\n\t[\"3\"]" << std::endl;
-    std::cout << secondPerson.Person::getDateOfBirth().tm_year
-              << "\n\t[\"70\"]" << std::endl;
+    std::cout << "Date of birth.\n";
+    std::cout << "\t" << secondPerson.Person::getDateOfBirth().tm_mday
+              << "\t[14 (birth date)]" << std::endl;
+    std::cout << "\t" << secondPerson.Person::getDateOfBirth().tm_mon
+              << "\t[3 (birth month)]" << std::endl;
+    std::cout << "\t" << secondPerson.Person::getDateOfBirth().tm_year
+              << "\t[70 (birth year since 1900)]" << std::endl;
+              
+    std::cout << "Contact details.\n";
+    /***************    Testing getAddress()  */
+    std::cout << "\t" << secondPerson.Person::getAddress()
+              << "\t[This is where I live.]" << std::endl;
+    /***************    Testing getEmail()  */
+    std::cout << "\t" << secondPerson.Person::getEmail()
+              << "\t[student@richmond.edu]" << std::endl;
+    std::cout << "\t" << secondPerson.Person::getPhone()
+              << "\t[8042898000]" << std::endl;
     
     
     
@@ -77,7 +91,7 @@ int main()
     /***********************************************************************
     ****************    Section: Student tests   ***************************
     ***********************************************************************/
-
+    
     Student firstStudent();
     Student secondStudent(
                89321738, "km3lw", "Smartypants", "Joe", 
@@ -89,12 +103,12 @@ int main()
 
     cout << setfill ('=') << setw(64) << endl;
 
-    list<string>::const_iterator iterator;
+    list<string>::iterator iterator;
 
 
     cout << "checking that add Course works, should return Algebra" << endl;
     secondStudent.Student::addCourse("Algebra");
-    for(iterator = Student::courses.begin(); iterator != courses.end(); ++iterator){
+    for(iterator = secondStudent.Student::getCourses().begin(); iterator != secondStudent.Student::getCourses().end(); ++iterator){
         cout << *iterator;
     }
 
@@ -111,6 +125,7 @@ int main()
     secondStudent.Student::clearCourses();
     secondStudent.Student::printCourses();
     cout <<"Nothing is printed check" << endl;
+
 
 
 
