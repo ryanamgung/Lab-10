@@ -107,6 +107,7 @@ int main()
     std::cout << "\t" << firstPerson.Person::getPhone()
               << "\t[8044004408]" << std::endl;
             
+    /***************    Testing copied object for correctness   */            
     std::cout << std::setfill ('=') << std::setw (64) << "\n";    
     std::cout << "Testing copied object.\n";
     
