@@ -91,9 +91,6 @@ int main()
 
     list<string>::const_iterator iterator;
 
-    for(iterator = Student::courses.begin(); iterator != courses.end(); ++iterator){
-        cout << *iterator;
-    }
 
     cout << "checking that add Course works, should return Algebra" << endl;
     secondStudent.Student::addCourse("Algebra");
@@ -101,7 +98,21 @@ int main()
         cout << *iterator;
     }
 
-    cout << 
+    cout << "checking that remove Course works, should return null" << endl;
+    secondStudent.Student::removeCourse("Algebra");
+    secondStudent.Student::printCourses();
+    cout << "Nothing printed check" << endl;
+
+    cout << "Checking set and print courses" << endl;
+    secondStudent.Student::setCourses("Linear Algebra, Biology 101, Chemistry 101, Music 300, Intro to CS");
+    secondStudent.Student::printCourses();
+
+    cout << "Clear courses" << endl;
+    secondStudent.Student::clearCourses();
+    secondStudent.Student::printCourses();
+    cout <<"Nothing is printed check" << endl;
+
+
 
     
         

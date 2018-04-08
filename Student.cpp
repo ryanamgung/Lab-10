@@ -36,12 +36,12 @@ void Student::addCourse(std::string course){
 }
 
 void Student::removeCourse(std::string course){
-	courses.pop_back(course);
+	courses.remove(course);
 }
 
 void Student::printCourses(){
-	    std::cout << "Your courses are " << std::endl;
-        std::cout << courses << std::endl;
+     std::cout << "Your courses are " << std::endl;
+     std::cout << courses << std::endl;
 }
 
 void Student::setCourses(std::list<std::string> courses){
@@ -88,7 +88,7 @@ void setAdmitDate(int day, int month, int year)
 	year_admit = year 
 }
 
-void setSchool(Student::School school)
+void setSchool(School school)
 {
 	school = this.school;
 }
