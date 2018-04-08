@@ -27,15 +27,15 @@ Student::Student(int urid, std::string netid, std::string lname, std::string fna
 
 std::list<std::string> Student::getCourses()
 {
-	return courses;
+	return Student::courses;
 }
 
 void Student::addCourse(std::string course){
-	courses.push_back(course);
+	Student::courses.push_back(course);
 }
 
 void Student::removeCourse(std::string course){
-	courses.remove(course);
+	Student::courses.remove(course);
 }
 
 void Student::printCourses(){
