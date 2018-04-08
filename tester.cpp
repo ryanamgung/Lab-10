@@ -103,11 +103,19 @@ int main()
 
     cout << setfill ('=') << setw(64) << endl;
 
-    for(int i = 0; i < secondStudent.Student::courses.size; i++){
-        cout << secondStudent.Student::courses[i] << endl;
+    list<string>::const_iterator iterator;
+
+    for(iterator = Student::courses.begin(); iterator != courses.end(); ++iterator){
+        cout << *iterator;
     }
 
+    cout << "checking that add Course works, should return Algebra" << endl;
     secondStudent.Student::addCourse("Algebra");
+    for(iterator = Student::courses.begin(); iterator != courses.end(); ++iterator){
+        cout << *iterator;
+    }
+
+    cout << 
 
     */
         
