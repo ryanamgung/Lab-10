@@ -102,6 +102,30 @@ int main()
     Student thirdStudent(secondStudent);
 
     cout << setfill ('=') << setw(64) << endl;
+    std::cout << std::setfill ('=') << std::setw (64) << "\n";
+    
+    std::cout << "Testing getters and setters.\n";
+    std::cout << std::setfill ('.') << std::setw (64) << "\n";
+    
+    /***************    Testing getAdmitDate()  */
+    std::cout << "Date of birth.\n";
+    std::cout << "\t" << secondStudent.Student::getAdmitDate().tm_mday
+              << "\t[30 (admit date)]" << std::endl;
+    std::cout << "\t" << secondStudent.Student::getAdmitDate().tm_mon
+              << "\t[3 (admit month)]" << std::endl;
+    std::cout << "\t" << secondStudent.Student::getAdmitDate().tm_year
+              << "\t[2015 (admit year since 0)]" << std::endl;
+    /***************    Testing getSchool()  */
+    std::cout << "\t" << secondStudent.Studentn::getSchool()
+              << "\t[School : AS]" << std::endl;
+              
+    /***************    Testing setGPA() and getGPA()  */
+    std::cout << "Set GPA to 3.5.\n";   
+    Student::secondStudent.setGPA(3.5)
+    std::cout << "\t" << secondPerson.Person::getGPA()
+              << "\t[3.5(GPA)]" << std::endl;
+              
+
 
     list<string>::iterator iterator;
 

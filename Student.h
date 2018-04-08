@@ -22,7 +22,7 @@ class Student : public Person
         int year_admit;
         School school;
         bool is_full_time;
-        std::list<std::string> courses;
+        std::list <std::string> courses;
 
 
 

@@ -55,9 +55,7 @@ void Student::clearCourses(){
 
 struct tm getAdmitDate()
 {
-	Student::year_admit.tm_year = 0;
-	Student::month_admit.tm_month = -1;
-	Student::day_admit.tm_mday = -1;
+	return Student.admitDate;
 }
 
 School getSchool()
@@ -89,12 +87,12 @@ void setAdmitDate(int day, int month, int year)
 
 void setSchool(School school)
 {
-	school = this.school;
+	this -> school = school;
 }
 
 void setGPA(double gpa)
 {
-	gpa = this.gpa;
+	this -> gpa = gpa;
 }
 
 void setUnitsCompleted(double units)
