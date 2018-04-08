@@ -23,8 +23,7 @@ class Student : public Person
         School school;
         bool is_full_time;
         std::list<std::string> courses;
-
-
+        struct tm admitDate;
 
     public:
         Student();                      // explicitly call Person() on implementation
