@@ -136,23 +136,12 @@ int main()
     std::cout << std::setfill ('=') << std::setw (64) << "\n";
     std::cout << std::setfill ('=') << std::setw (64) << "\n";
   
-    /*
-       
-        void setFirstName(std::string fname);
-        void setLastName(std::string lname);
-        void setDateOfBirth(int day, int month, int year);
-        void setAddress(std::string address);
-        void setNetID(std::string netid);
-        void setURID(int urid);
-        void setEmail(std::string email);
-        void setPhone(long number);
-    */
-   
+     
     
     /***********************************************************************
     ****************    Section: Student tests   ***************************
     ***********************************************************************/
-    std::cout << "Tests for STUDENT.\n";
+    std::cout << "\nTests for STUDENT.";
     
     Student firstStudent();
     Student secondStudent(
@@ -205,6 +194,7 @@ int main()
     std::cout << "\t" << secondStudent.Student::isFullTime()
               << "\t[False(FullTimeStatus)]" << std::endl;
               
+    std::cout << std::setfill ('.') << std::setw (64) << "\n";              
 
 
     list<string>::iterator iterator;
@@ -215,12 +205,16 @@ int main()
     secondStudent.Student::printCourses();
     cout << "\n" << endl;
 
+    std::cout << std::setfill ('.') << std::setw (64) << "\n";
+
     cout << "checking that remove Course works, should return null" << endl;
     secondStudent.Student::removeCourse("Algebra");
 
     secondStudent.Student::printCourses();
     cout << "\n" << endl;
     cout << "Nothing printed check\n" << endl;
+    
+    std::cout << std::setfill ('.') << std::setw (64) << "\n";
 
     cout << "Checking set and print courses" << endl;
 
@@ -241,31 +235,7 @@ int main()
     secondStudent.Student::printCourses();
     cout <<"Nothing is printed check" << endl;
 
-
-
-
-    
-        
-    /*
-        std::list<std::string> getCourses();
-        void                   addCourse(std::string course);
-        void                   removeCourse(std::string course);
-        void                   printCourses();
-        void                   setCourses(std::list<std::string> courses);
-        void                   clearCourses();
-
-        struct tm              getAdmitDate();
-        School                 getSchool();
-        double                 getGPA();
-        double                 getUnitsCompleted();
-        bool                   isFullTime();
-
-        void setAdmitDate(int day, int month, int year);
-        void setSchool(School school);
-        void setGPA(double gpa);
-        void setUnitsCompleted(double units);
-        void setFullTimeStatus(bool isFullTime);
-        */
+    std::cout << std::setfill ('=') << std::setw (64) << "\n";
     
 	return 0;
 }
