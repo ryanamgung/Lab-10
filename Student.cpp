@@ -40,10 +40,11 @@ void Student::removeCourse(std::string course){
 
 void Student::printCourses(){
     std::cout << "Your courses are " << std::endl;
-    list<string>::const_iterator i;
-	for( i = s.begin(); i != s.end(); ++i)
-		cout << *i << " ";
-	cout << endl;
+    for(std::list<std::string>::const_iterator i = Student::courses.begin(); i != Student::courses.end(); ++i)
+    {
+        std::cout << *i;//->c_str();
+    }
+
 }
 
 void Student::setCourses(std::list<std::string> courses){
