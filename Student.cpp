@@ -16,12 +16,12 @@ Student::~Student()
 Student::Student(int urid, std::string netid, std::string lname, std::string fname, int dob_day, int dob_mo, int dob_yr, std::string email, std::string address, long phone, int day_admit, int month_admit, int year_admit, School school, bool is_full_time, double units_completed)
 {
 	Person(urid, netid, lname, fname, dob_day, dob_mo ,dob_yr, email, address, phone);
-	admitDate.tm_mday = 0;
-	admitDate.tm_mon = 0;
-	admitDate.tm_year = 0;
-	Student::is_full_time = false;
-	Student::school = Student::UNDEFINED;
-	Student::units_completed = 0;
+	admitDate.tm_mday = day_admit;
+	admitDate.tm_mon = month_admit;
+	admitDate.tm_year = year_admit;
+	Student::is_full_time = is_full_time;
+	Student::school = school;
+	Student::units_completed = units_completed;
 }
 
 

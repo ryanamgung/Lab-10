@@ -143,15 +143,56 @@ int main()
     Student thirdStudent(secondStudent);
 
     cout << setfill ('=') << setw(64) << endl;
+    std::cout << std::setfill ('=') << std::setw (64) << "\n";
+    
+    std::cout << "Testing getters and setters.\n";
+    std::cout << std::setfill ('.') << std::setw (64) << "\n";
+    
+    /***************    Testing set and getAdmitDate()  */
+
+    secondStudent.Student::setAdmitDate(5, 7, 2005);
+
+    std::cout << "\t" << secondStudent.Student::getAdmitDate().tm_mday
+              << "\t[5 (admit date)]" << std::endl;
+    std::cout << "\t" << secondStudent.Student::getAdmitDate().tm_mon
+              << "\t[7 (admit month)]" << std::endl;
+    std::cout << "\t" << secondStudent.Student::getAdmitDate().tm_year
+              << "\t[2005 (admit year since 0)]" << std::endl;
+    /***************    Testing set and getSchool()  */
+    std::cout << "Set school to LAW.\n"; 
+    secondStudent.Student::setSchool(Student::LAW);
+    std::cout << "\t" << secondStudent.Student::getSchool()
+              << "\t[School : LAW should return 2 for index of the school struct]" << std::endl;
+              
+    /***************    Testing setGPA() and getGPA()  */
+    std::cout << "Set GPA to 3.5.\n";   
+    secondStudent.Student::setGPA(3.5);
+    std::cout << "\t" << secondStudent.Student::getGPA()
+              << "\t[3.5(GPA)]" << std::endl;
+
+    /***************    Testing setUnitsCompleted() and getUnitedCompleted()  */
+    std::cout << "Set units completed to 6\n";   
+    secondStudent.Student::setUnitsCompleted(6);
+    std::cout << "\t" << secondStudent.Student::getUnitsCompleted()
+              << "\t[6(Units Completed)]" << std::endl;
+
+    /***************    Testing setGPA() and getGPA()  */
+    std::cout << "\t" << secondStudent.Student::isFullTime()
+              << "\t[True(FullTimeStatus created in our constructor)]" << std::endl;
+    std::cout << "Set full time status to false\n";   
+    secondStudent.Student::setFullTimeStatus(false);
+    std::cout << "\t" << secondStudent.Student::isFullTime()
+              << "\t[False(FullTimeStatus)]" << std::endl;
+              
+
 
     list<string>::iterator iterator;
 
 
     cout << "checking that add Course works, should return Algebra" << endl;
     secondStudent.Student::addCourse("Algebra");
-    for(iterator = secondStudent.Student::getCourses().begin(); iterator != secondStudent.Student::getCourses().end(); ++iterator){
-        cout << *iterator;
-    }
+    cout << "error at for" << endl;
+    secondStudent.Student::printCourses();
 
     cout << "checking that remove Course works, should return null" << endl;
     secondStudent.Student::removeCourse("Algebra");
@@ -159,7 +200,16 @@ int main()
     cout << "Nothing printed check" << endl;
 
     cout << "Checking set and print courses" << endl;
-    //secondStudent.Student::setCourses("Linear Algebra, Biology 101, Chemistry 101, Music 300, Intro to CS");
+
+    list<string> newCourses;
+    newCourses.push_back("Linear Algebra");
+    newCourses.push_back("Biology 101");
+    newCourses.push_back("Chemistry 101");
+    newCourses.push_back("Music 300");
+    newCourses.push_back("Intro to CS");
+     
+    secondStudent.Student::setCourses(newCourses);
+
     secondStudent.Student::printCourses();
 
     cout << "Clear courses" << endl;
