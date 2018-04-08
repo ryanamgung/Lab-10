@@ -55,54 +55,54 @@ void Student::clearCourses(){
 	courses.clear();
 }
 
-struct tm getAdmitDate()
+struct tm Student::getAdmitDate()
 {
 	return Student::admitDate;
 }
 
-School getSchool()
+School Student::getSchool()
 {
 	return school;
 }
         
-double getGPA()
+double Student::getGPA()
 {
 	return gpa;
 }
 
-double getUnitsCompleted()
+double Student::getUnitsCompleted()
 {
 	return units_completed;
 }
 
-bool isFullTime()
+bool Student::isFullTime()
 {
 	return is_full_time;
 }
 
-void setAdmitDate(int day, int month, int year)
+void Student::setAdmitDate(int day, int month, int year)
 {
 	day_admit = day;
 	month_admit = month;
 	year_admit = year 
 }
 
-void setSchool(School school)
+void Student::setSchool(School school)
 {
 	school = this.school;
 }
 
-void setGPA(double gpa)
+void Student::setGPA(double gpa)
 {
 	gpa = this.gpa;
 }
 
-void setUnitsCompleted(double units)
+void Student::setUnitsCompleted(double units)
 {
 	units_completed = units;
 }
 
-void setFullTimeStatus(bool isFullTime)
+void Student::setFullTimeStatus(bool isFullTime)
 {
 	is_full_time = isFullTime;
 }
