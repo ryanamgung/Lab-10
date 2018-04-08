@@ -64,38 +64,38 @@ int          Person::getURID()
     return 0;
 }
 
-std::string  getEmail()
+std::string  Person::getEmail()
+{
+    return "";
+}
+
+long         Person::getPhone()
 {
     return 0;
 }
 
-long         getPhone()
-{
-    return 0;
-}
-
-void setFirstName(std::string fname)
+void Person::setFirstName(std::string fname)
 {}
 
-void setLastName(std::string lname)
+void Person::setLastName(std::string lname)
 {}
 
-void setDateOfBirth(int day, int month, int year)
+void Person::setDateOfBirth(int day, int month, int year)
 {}
 
-void setAddress(std::string address)
+void Person::setAddress(std::string address)
 {}
 
-void setNetID(std::string netid)
+void Person::setNetID(std::string netid)
 {}
 
-void setURID(int urid)
+void Person::setURID(int urid)
 {}
 
-void setEmail(std::string email)
+void Person::setEmail(std::string email)
 {}
 
-void setPhone(long number)
+void Person::setPhone(long number)
 {}
 
 #endif

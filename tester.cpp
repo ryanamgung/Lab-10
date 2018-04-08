@@ -2,7 +2,7 @@
 #include <iostream>
 #include <iomanip>
 #include "Person.h"
-#include "Student.h"
+//#include "Student.h"
 #include <iomanip>
 using namespace std;
 
@@ -33,19 +33,33 @@ int main()
     
     std::cout << "Testing getters.\n";
     std::cout << std::setfill ('.') << std::setw (64) << "\n";
+    
+    std::cout << "Name.\n";
     /***************    Testing getFirstName()  */
-    std::cout << secondPerson.Person::getFirstName()
-              << "\n\t[\"AFirstName\"]" << std::endl;
+    std::cout << "\t" << secondPerson.Person::getFirstName()
+              << "\t[AFirstName]" << std::endl;
     /***************    Testing getLastName()  */
-    std::cout << secondPerson.Person::getLastName()
-              << "\n\t[\"ALastName\"]" << std::endl;
+    std::cout << "\t" << secondPerson.Person::getLastName()
+              << "\t[ALastName]" << std::endl;
+              
     /***************    Testing getDateOfBirth()  */
-    std::cout << secondPerson.Person::getDateOfBirth().tm_mday
-              << "\n\t[\"14\"]" << std::endl;
-    std::cout << secondPerson.Person::getDateOfBirth().tm_mon
-              << "\n\t[\"3\"]" << std::endl;
-    std::cout << secondPerson.Person::getDateOfBirth().tm_year
-              << "\n\t[\"70\"]" << std::endl;
+    std::cout << "Date of birth.\n";
+    std::cout << "\t" << secondPerson.Person::getDateOfBirth().tm_mday
+              << "\t[14 (birth date)]" << std::endl;
+    std::cout << "\t" << secondPerson.Person::getDateOfBirth().tm_mon
+              << "\t[3 (birth month)]" << std::endl;
+    std::cout << "\t" << secondPerson.Person::getDateOfBirth().tm_year
+              << "\t[70 (birth year since 1900)]" << std::endl;
+              
+    std::cout << "Contact details.\n";
+    /***************    Testing getAddress()  */
+    std::cout << "\t" << secondPerson.Person::getAddress()
+              << "\t[This is where I live.]" << std::endl;
+    /***************    Testing getEmail()  */
+    std::cout << "\t" << secondPerson.Person::getEmail()
+              << "\t[student@richmond.edu]" << std::endl;
+    std::cout << "\t" << secondPerson.Person::getPhone()
+              << "\t[8042898000]" << std::endl;
     
     
     
@@ -77,7 +91,7 @@ int main()
     /***********************************************************************
     ****************    Section: Student tests   ***************************
     ***********************************************************************/
-
+    /*
     Student firstStudent();
     Student secondStudent(
                89321738, "km3lw", "Smartypants", "Joe", 
@@ -95,7 +109,7 @@ int main()
 
     secondStudent.Student::addCourse("Algebra");
 
-    
+    */
         
     /*
         std::list<std::string> getCourses();
