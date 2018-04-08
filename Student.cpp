@@ -82,29 +82,29 @@ bool Student::isFullTime()
 
 void Student::setAdmitDate(int day, int month, int year)
 {
-	day_admit = day;
-	month_admit = month;
-	year_admit = year 
+    Student::admitDate.tm_mday = day;
+    Student::admitDate.tm_mon = month;
+    Student::admitDate.tm_year = year;
 }
 
 void Student::setSchool(School school)
 {
-	school = this.school;
+	Student::school = school;
 }
 
 void Student::setGPA(double gpa)
 {
-	gpa = this.gpa;
+	Student::gpa = gpa;
 }
 
 void Student::setUnitsCompleted(double units)
 {
-	units_completed = units;
+	Student::units_completed = units;
 }
 
 void Student::setFullTimeStatus(bool isFullTime)
 {
-	is_full_time = isFullTime;
+	Student::is_full_time = isFullTime;
 }
 
 
